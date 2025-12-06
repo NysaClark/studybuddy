@@ -1,0 +1,74 @@
+:root {
+  --bs-primary: #9556c8;
+  --bs-primary-rgb: rgb(149, 86, 200);
+
+  --bs-primary-darker: #813CB9;
+  --bs-primary-ligher: #9E65CD;
+
+  --bs-secondary: #56287b;
+  --bs-secondary-rgb: rgb(86, 40, 123);
+
+  --bs-info: #c5a3e1;
+  --bs-info-rgb: rgb(197, 163, 225);
+
+  --bs-body-color: #2b143e;
+  --bs-body-color-rgb: rgb(43, 20, 62);
+
+  --bs-body-bg: #f5f0fa;
+  --bs-body-bg-rgb: rgb(245, 240, 250);
+
+  --bs-success: #7cc757;
+  --bs-success-rgb: rgb(124, 199, 87);
+
+  --bs-danger: #c75656;
+  --bs-danger-rgb: rgb(199, 86, 86);
+}
+
+* {
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box;
+}
+
+main{
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  background-color: var(--bs-secondary);
+}
+
+.home-card {
+  width: 100%;
+  max-width: 550px;
+  min-height: 280px;
+}
+
+ .home-card #left{
+  width: 50%;
+ }
+
+.btn.btn-primary {
+  width: fit-content;
+  background-color: var(--bs-primary);
+  border: none;
+}
+
+.btn.btn-primary:hover {
+  background-color: #9E65CD;
+  /* TODO - transition maybe */
+}
+
+.btn.btn-primary:active {
+  background-color: var(--bs-primary-darker);
+}
+
+@media only screen and (max-width: 768px){
+  .home-card #left{
+    width: 100%;
+  }
+}
