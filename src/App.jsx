@@ -3,22 +3,22 @@ import Footer from "./Components/Footer"
 import Home from "./Components/Home"
 function App() {
   const sets = [
-    // {
-    //   name: "Set Name",
-    //   numCards: 10
-    // },
-    // {
-    //   name: "Set Name",
-    //   numCards: 4
-    // },
-    // {
-    //   name: "Set Name",
-    //   numCards: 6
-    // },
+    {
+      name: "Set Name",
+      numCards: 10
+    },
+    {
+      name: "Set Name",
+      numCards: 4
+    },
+    {
+      name: "Set Name",
+      numCards: 6
+    },
   ]
 
   return (
-    <main>
+    <main className="d-flex flex-column">
       <Header />
 
       <Home sets={sets} />

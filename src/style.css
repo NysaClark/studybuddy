@@ -36,6 +36,19 @@ main{
 
 a {
   text-decoration: none;
+  color: var(--bs-body-color);
+}
+a:focus{
+  outline: none;
+}
+input{
+  color: var(--bs-body-color);
+}
+input::placeholder{
+  color: var(--bs-secondary);
+}
+input:focus{
+  outline: none;
 }
 
 footer {
@@ -71,4 +84,18 @@ footer {
   .home-card #left{
     width: 100%;
   }
+}
+
+#searchIcon{
+  color: var(--bs-secondary);
+}
+
+select#filter{
+  background-color: transparent;
+  color: var(--bs-body-color);
+  cursor: pointer;
+}
+
+select#filter:focus{
+  outline: none;
 }
