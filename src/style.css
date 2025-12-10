@@ -34,6 +34,14 @@ main{
   min-height: 100vh;
 }
 
+header p:hover{
+  color: var(--bs-primary);
+}
+
+/* @media only screen and (max-width: 425px){
+  
+} */
+
 a {
   text-decoration: none;
   color: var(--bs-body-color);
@@ -41,6 +49,14 @@ a {
 a:focus{
   outline: none;
 }
+
+a#addBtn{
+  background-color: var(--bs-secondary);
+}
+a#addBtn:hover{
+  background-color: var(--bs-primary);
+}
+
 input{
   color: var(--bs-body-color);
 }

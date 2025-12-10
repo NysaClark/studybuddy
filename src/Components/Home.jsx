@@ -4,9 +4,11 @@ const Home = ({ sets }) => {
       <div className="home-card bg-white rounded-2 d-flex flex-row align-items-center p-4">
         <div id="left" className="d-flex flex-column align-items-center ">
           <p className="text-center mb-4">Create your own flashcards</p>
-          <button className="btn btn-primary py-2 px-3 rounded-5">
-            Create flashcards
-          </button>
+          <a href="/create">
+            <button className="btn btn-primary py-2 px-3 rounded-5">
+              Create flashcards
+            </button>
+          </a>
         </div>
         <div className="d-none d-md-flex flex-column align-items-center w-50">
           <img className="mw-100" src="flashcards.png" />
@@ -18,7 +20,8 @@ const Home = ({ sets }) => {
 
         {sets.length ? (
           <div className="d-flex flex-column gap-3 py-3">
-            <div className="d-flex justify-content-between">
+           
+            {/* <div className="d-flex justify-content-between">
               <div className="d-flex justify-content-between px-3 align-items-center gap-3 py-3 bg-white rounded-2">
                 <input className=" border-0 " placeholder="Search..." />
                 <svg
@@ -40,11 +43,11 @@ const Home = ({ sets }) => {
                   <option value="old">Old</option>
                 </select>
               </div>
-              </div>
+            </div> */}
 
             {sets.map((set, index) => {
               return (
-                <a href="#">
+                <a href={`/${index}`}>
                   <div
                     key={index}
                     className="d-flex px-3 py-3 align-items-center justify-content-between bg-white rounded-2"
@@ -61,9 +64,11 @@ const Home = ({ sets }) => {
             <h3 className="text-center fw-bold">
               You have not created any flashcard sets
             </h3>
-            <button className="btn btn-primary mt-3 py-2 px-3 rounded-5">
-              Create one now
-            </button>
+            <a href="/create">
+              <button className="btn btn-primary mt-3 py-2 px-3 rounded-5">
+                Create one now
+              </button>
+            </a>
           </div>
         )}
       </div>
