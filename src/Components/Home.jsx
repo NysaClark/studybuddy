@@ -1,7 +1,7 @@
 const Home = ({ sets }) => {
   return (
     <div className="d-flex flex-column align-items-center py-3 px-4 flex-grow-1">
-      <div className="home-card bg-white rounded-2 d-flex flex-row align-items-center p-4">
+      <div id="home-card" className=" bg-white rounded-2 d-flex flex-row align-items-center p-4">
         <div id="left" className="d-flex flex-column align-items-center ">
           <p className="text-center mb-4">Create your own flashcards</p>
           <a href="/create">
@@ -21,7 +21,7 @@ const Home = ({ sets }) => {
         {sets.length ? (
           <div className="d-flex flex-column gap-3 py-3">
            
-            {/* <div className="d-flex justify-content-between">
+            <div className="d-flex justify-content-between">
               <div className="d-flex justify-content-between px-3 align-items-center gap-3 py-3 bg-white rounded-2">
                 <input className=" border-0 " placeholder="Search..." />
                 <svg
@@ -43,7 +43,7 @@ const Home = ({ sets }) => {
                   <option value="old">Old</option>
                 </select>
               </div>
-            </div> */}
+            </div> 
 
             {sets.map((set, index) => {
               return (
@@ -52,8 +52,8 @@ const Home = ({ sets }) => {
                     key={index}
                     className="d-flex px-3 py-3 align-items-center justify-content-between bg-white rounded-2"
                   >
-                    <h3 className="fs-5">{set.name}</h3>
-                    <p>{set.numCards} Flashcards</p>
+                    <h3 className="fs-5">{set.title}</h3>
+                    <p>{set.flashcards.length} Flashcards</p>
                   </div>
                 </a>
               );

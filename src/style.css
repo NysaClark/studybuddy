@@ -71,14 +71,22 @@ footer {
   background-color: var(--bs-secondary);
 }
 
-.home-card {
+#home-card {
   width: 100%;
   max-width: 550px;
   min-height: 280px;
 }
 
- .home-card #left{
+ #home-card #left{
   width: 50%;
+ }
+ .btn{
+  border: none;
+ }
+
+ .btn:active{
+  border: none;
+  outline: none;
  }
 
 .btn.btn-primary {
@@ -88,7 +96,7 @@ footer {
 }
 
 .btn.btn-primary:hover {
-  background-color: #9E65CD;
+  background-color: var(--bs-primary-ligher);
   /* TODO - transition maybe */
 }
 
@@ -96,10 +104,26 @@ footer {
   background-color: var(--bs-primary-darker);
 }
 
+.btn .text-secondary {
+  color: var(--bs-secondary) !important;
+}
+
 @media only screen and (max-width: 768px){
-  .home-card #left{
+  #home-card #left{
     width: 100%;
   }
+
+  .flashcard{
+    /* padding-bottom: 1.8rem !important; */
+  }
+
+ .flashcard .card-row{
+    flex-wrap: wrap;
+  }
+  
+  .answer, .question{
+    width: 100% !important;
+  } 
 }
 
 #searchIcon{
@@ -115,3 +139,16 @@ select#filter{
 select#filter:focus{
   outline: none;
 }
+
+
+#card{
+  width: 100%;
+  max-width: 550px;
+  height: 280px;
+  cursor: pointer;
+}
+
+.flashcard{
+  padding-bottom: 2rem !important;
+}
+
